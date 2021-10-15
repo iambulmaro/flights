@@ -1,0 +1,15 @@
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-image: url('./images/img3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: inherit;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}

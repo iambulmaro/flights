@@ -1,0 +1,49 @@
+.reviewPageContainer{
+    width: 70vw;
+    border-radius: 5%;
+    margin: 10vw auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flexAirline{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.roundTrip{
+    background: linear-gradient(45deg, lightblue, transparent);
+    padding: 10vh;
+    width: 30vw;
+    border-radius: 10%;
+}
+
+.selectedFlight{
+    background: linear-gradient(45deg, lightblue, transparent);
+    padding: 10vh;
+    width: 70vw;
+    margin-right: 0.5%;
+    border-radius: 10%;
+}
+
+.fare{
+    display:  flex;
+    justify-content: space-between;
+}
+
+.fare span{
+    border-bottom: 1px solid black
+}
+
+.continue{
+    margin-top: 2vw;
+    padding: 10px;
+    background: darkorange;
+    border-radius: 10%;
+    border: none;
+}
+
+.continue:hover{
+    background-color: blanchedalmond;
+    text-decoration: none;
+}

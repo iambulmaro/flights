@@ -1,0 +1,48 @@
+.travelerInfo {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 12vw auto;
+	width: 100vw;
+}
+
+.travelerInfoForm {
+	background: linear-gradient(45deg, lightblue, transparent);
+	border-radius: 5%;
+	padding: 2vw;
+}
+
+.info-form-group {
+	display: flex;
+	white-space: nowrap;
+}
+
+.info-form-group label {
+	font-size: 0.8rem;
+	margin-right: 0.5vw;
+}
+
+.info-form-control {
+	display: inline-flexbox;
+	max-width: 100%;
+	padding: .375rem .75rem;
+	font-size: 0.8rem;
+	line-height: 1.5;
+	color: #495057;
+	margin-bottom: 2vw;
+	width: 340px;
+}
+
+#selectOpt {
+	max-width: 50%;
+	height: 1.7rem;
+	padding: .375rem .75rem;
+	font-size: 0.8rem;
+	border: none;
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+}
+
+::placeholder {
+	font-size: 0.5rem;
+}

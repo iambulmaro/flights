@@ -1,0 +1,72 @@
+.table{
+  width: 50vw;
+  margin: 2% auto;
+  background: linear-gradient(45deg, lightblue, blanchedalmond);
+  border-radius: 5%;
+  border: none;
+}
+
+.filters{
+    background: linear-gradient(45deg, lightblue, blanchedalmond);
+    width: 15vw;
+    padding: 2vw;
+    margin-right: 0.5%;
+    border-radius: 5%;
+}
+
+.filters label{
+    font-size: 1rem;
+}
+
+.stops label {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.airlines{
+    padding: 2vw;
+    width: 40vw;
+}
+
+.airlines label p{
+     font-size: 0.2rem;
+}
+
+.result1{
+    background: linear-gradient(45deg, lightblue, blanchedalmond);
+    display: flex;
+    width: 70vw;
+    justify-content: space-evenly;
+    border-radius: 5%;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+    width: 78vw;
+    margin: 0 auto;
+}
+
+.select{
+    padding: 15px 30px;
+    background: orange;
+    border: none;
+    border-radius: 10%;
+    color: white;
+}
+
+.select:hover{
+    background: lavenderblush;
+    text-decoration: none;
+}
+
+
+.total{
+    margin-top: 10vw;
+}
+
+.searchResults{
+   margin-bottom: 2vw;
+   margin-top: 10vw;
+}
+
