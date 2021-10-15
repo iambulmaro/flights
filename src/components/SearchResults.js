@@ -7,7 +7,7 @@ const requestData = JSON.parse(localStorage.getItem('formData'));
 
 
 const SearchResults = () => {
-  const {from, to, depart, flightReturn, noOfTravelers, num} = requestData;
+  const {from, to, depart, flightReturn, noOfTravelers} = requestData;
   return (
     <div className="searchResults">
       <table class="table">
@@ -37,7 +37,7 @@ const SearchResults = () => {
               <input type="date" defaultValue={flightReturn}/>
             </td>
             <td>
-              <input type="number" defaultValue={num}/>
+              <input type="number" defaultValue={noOfTravelers}/>
             </td>
             <td>
             <select name="cars" id="cars">

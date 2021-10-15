@@ -4,8 +4,6 @@ import "../styles/Home.css";
 const Home = () => {
   const [num, setNum] = useState(1);
   
-
-
   const [formData, setFormData] = useState({
     from: "",
     to: "",
@@ -17,14 +15,17 @@ const Home = () => {
     num
   });
 
+  // eslint-disable-next-line
   const add = () => {
     setNum(num + 1);
   };
 
+  // eslint-disable-next-line
   const subtract = () => {
     setNum(num - 1);
   };
 
+  // eslint-disable-next-line
   const handleChange = (e) => {
     setFormData({...formData, [e.target.name]: e.target.value });
   }; 
@@ -33,10 +34,38 @@ const Home = () => {
     localStorage.setItem('formData', JSON.stringify(formData))
   }, [formData])
 
- 
+  const [showMissionStatement, setshowMissionStatement] = useState(true);
+  const [showRooms, setshowRooms] = useState(false);
+  const [showFlights, setshowFlights] = useState(false);
+  const onClickRooms = () => {setshowRooms(true); setshowFlights(false); setshowMissionStatement(false);};
+  const onClickFlights = () => {setshowFlights(true); setshowRooms(false); setshowMissionStatement(false);};
   
   return (
-    <form className="fly">
+    <main>
+      <div className="container chooseOption">
+        {/* <img className="logo" src={require('../images/comtrago.png')} alt='img' /> */}
+          <div className="row">
+            <div className="col-md-8 offset-md-2"> 
+              {showMissionStatement ? <MissionStatement /> : null}
+            </div> 
+          </div>
+          <div className="row my-2">
+            <div className="col option-buttons">
+              <button className="btn btn-room" onClick={onClickRooms}>Reserve A Room</button>
+              <button className="btn btn-flights" onClick={onClickFlights}>Book A Flight</button>
+            </div>
+          </div>
+          <div className="row my-4">
+            <div className="col options">
+              {showRooms ? <Rooms /> : null}
+              {showFlights ? <Flights /> : null}
+            </div>
+        </div>
+      </div>
+
+
+
+    {/* <form className="fly">
       <h1>Fly</h1>
       <div className="radios">
         <label class="container">
@@ -127,8 +156,162 @@ const Home = () => {
  <div style={{marginTop: '5vh'}}>
       <a href='/results' className='search' >search</a>
       </div>
-    </form>
+    </form> */}
+    </main>
   );
 };
+
+const MissionStatement = () => (
+  <p className="missionStatement my-3">Need to book a flight or find a room? </p>
+);
+const Rooms = () =>  (
+  <div id="room" class="booking-form">
+    <h2 class="booking-form--heading">Rooms</h2>
+    <form>
+      <div class="row">
+        <div class="col-md-3 align-self-center">
+          <div class="form-group">	
+            <span class="form-label">Destination</span>
+            <input id="destination" class="form-control" type="text" name="destination" placeholder="Country, ZIP, city..." />
+          </div>
+        </div>
+        <div class="col-md-6 align-self-center">
+          <div class="row ">
+            <div class="col-md-5">
+              <div class="form-group">	
+                <span class="form-label">Check In</span>
+                <input id="checkIn" class="form-control datepicker" type="date" name="checkIn" required/>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="form-group">	
+                <span class="form-label">Check out</span>
+                <input id="checkOut" class="form-control datepicker" type="date" name="checkOut" required/>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">	
+                <span class="form-label">Guests</span>
+                <select id="guests" class="form-control" defaultValue={{ label: "1", value: 1 }}>
+                  <option selected value="1">1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>	<span class="select-arrow"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 align-self-center">
+          <div class="form-btn">
+            <button class="btn btn-submit">Check availability</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  );
+
+
+const Flights = () =>  (
+  <div id="flights" class="booking-form">
+    <h2 class="booking-form--heading">Flights</h2>
+      <form>
+        <div class="row my-2">
+          <div class="col-md-3">
+            <div class="form-group">
+              <select class="form-control">
+                <option>Economy class</option>
+                <option>Business class</option>
+                <option>First class</option>
+              </select>
+              <span class="select-arrow"></span>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="form-group text-right">
+              <div class="form-check form-check-inline">
+                <label class="form-check-label px-2" for="roundtrip">Roundtrip</label>
+                <input class="form-check-input" type="radio" name="flight-type" id="roundtrip" value="roundtrip" checked/>
+                
+              </div>
+              <div class="form-check form-check-inline">
+                <label class="form-check-label px-2" for="one-way">One Way</label>
+                <input class="form-check-input" type="radio" name="flight-type" id="one-way" value="one-way"/>
+                
+              </div>
+              <div class="form-check form-check-inline">
+                <label class="form-check-label px-2" for="multi-city">Multi City</label>
+                <input class="form-check-input" type="radio" name="flight-type" id="multi-city" value="multi-city"/>
+                
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row my-2">
+          <div class="col-md-6">
+            <div class="form-group">
+              <span class="form-label">From</span>
+              <input class="form-control" type="text" placeholder="City or airport"/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <span class="form-label">To</span>
+              <input class="form-control" type="text" placeholder="City or airport"/>
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+
+          <div class="col-md-2">
+            <div class="form-group">
+              <span class="form-label">Adults (18+)</span>
+              <select class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+              <span class="select-arrow"></span>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <span class="form-label">Children (0-17)</span>
+              <select class="form-control">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+              </select>
+              <span class="select-arrow"></span>
+            </div>
+          </div>
+          <div class="col-md-3 offset-md-2">
+            <div class="form-group">
+              <span class="form-label">Departing</span>
+              <input class="form-control" type="date" required/>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <span class="form-label">Returning</span>
+              <input class="form-control" type="date" required/>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+
+          <div class="col">
+            <div class="form-btn">
+              <button class="btn btn-submit">Show flights</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  );
+
 
 export default Home;

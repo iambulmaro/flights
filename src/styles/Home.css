@@ -95,12 +95,6 @@
 	border-radius: 10%;
 }
 
-/* Hide the browser's default radio button */
-.container input {
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
-}
 
 /* Create a custom radio button */
 .checkmark {
@@ -206,4 +200,63 @@
 
 .noOfTravelers {
 	line-height: 0;
+}
+
+
+/* ===== New Home Styles ===== */
+.logo {
+	max-width: 300px;
+	width: 100%;
+	margin: auto;
+}
+.chooseOption {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.missionStatement {
+	color: #fff;
+	text-shadow: 0 0 10px #333;
+	font-size: 2rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+    letter-spacing: 1px;
+    width: 100%;
+    margin: auto;
+}
+
+/* Form Styles */
+.option-buttons .btn {
+	font-size: 20px;
+}
+.options .form-label {
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #fff;
+	text-shadow: 0 0 10px #333;
+	letter-spacing: 1px;
+}
+.options .form-check-label {
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: #fff;
+	text-shadow: 0 0 10px #333;
+	letter-spacing: 1px;
+}
+.booking-form {
+	background: rgba( 255, 255, 255, 0.25 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 6.5px );
+	-webkit-backdrop-filter: blur( 6.5px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	padding: 2%;
+}
+.booking-form--heading {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: #fff;
+	text-shadow: 0 0 10px #333;
+	margin-bottom: 20px;
 }

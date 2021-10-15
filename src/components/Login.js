@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <form className='loginForm'>
       <div className="form-group">
-        <label htmlFor="exampleInputEmail1">Email </label>
+        <label className="form-label" htmlFor="exampleInputEmail1">Email </label>
         <input
           type="email"
           className="form-control"
@@ -19,7 +19,7 @@ const Login = () => {
         </small>
       </div>
       <div className="form-group">
-        <label htmlFor="exampleInputPassword1">Password </label>
+        <label className="form-label" htmlFor="exampleInputPassword1">Password </label>
         <input
           type="password"
           className="form-control"
@@ -28,7 +28,7 @@ const Login = () => {
         />
       </div>
       <Link to='/'>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-submit">
           Login
       </button>
       </Link>

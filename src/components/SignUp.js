@@ -7,7 +7,7 @@ const SignUp = () => {
   return (
     <form className='signupForm'>
       <div className="form-group">
-        <label htmlFor="exampleInputEmail1">Email </label>
+        <label className="form-label" htmlFor="exampleInputEmail1">Email </label>
         <input
           type="email"
           className="form-control"
@@ -20,7 +20,7 @@ const SignUp = () => {
         </small>
       </div>
       <div className="form-group">
-        <label htmlFor="exampleInputPassword1">Password </label>
+        <label className="form-label" htmlFor="exampleInputPassword1">Password </label>
         <input
           type="password"
           className="form-control"
@@ -30,7 +30,7 @@ const SignUp = () => {
       </div>
 
       <div className="form-group">
-        <label htmlFor="exampleInputPassword1">Enter Password Again </label>
+        <label className="form-label" htmlFor="exampleInputPassword1">Enter Password Again </label>
         <input
           type="password"
           className="form-control"
@@ -39,12 +39,12 @@ const SignUp = () => {
         />
       </div>
       <Link to='/'>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-submit">
           Sign Up
-      </button>
+        </button>
       </Link>
 
-      <p className='suggest'>Already signed up, <Link to='/login'>click here to login</Link></p>
+      <p className='suggest'>Already signed up, click here to <Link to='/login'>login</Link>.</p>
     </form>
   );
 };

@@ -3,24 +3,27 @@
     flex-direction: column;
     margin: 12vw auto;
     width: 40%;
+    background: rgba( 255, 255, 255, 0.25 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 6.5px );
+	-webkit-backdrop-filter: blur( 6.5px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	padding: 2%;
 }
-
-.btn{
-    background: darkorange;
-    width: 10vw;
-    margin: 3vw auto;
-    border-radius: 20%;
-    border: none;
-    padding: 15px;
-    color: black;
-    font-weight: bolder;
+.loginForm .form-group {
+    margin-bottom: 1.5rem;
 }
-
-label{
-    font-size: 1.5rem;
-    font-weight: bolder;
+.loginForm .form-label  {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 10px #333;
+    letter-spacing: 1px;
 }
-
-.btn:hover{
-    background-color: blanchedalmond;
+.loginForm .form-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 10px #333;
 }
